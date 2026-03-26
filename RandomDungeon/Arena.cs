@@ -42,7 +42,7 @@ namespace RandomDungeon
             {
                 if(i == enemies.Count - 1)
                 {
-                    Console.Write($" {enemies[i]}");
+                    Console.WriteLine($" {enemies[i]}");
                 }
                 else
                 {
