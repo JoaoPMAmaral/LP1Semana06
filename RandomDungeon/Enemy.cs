@@ -64,15 +64,16 @@ namespace RandomDungeon
             return $"{name} ({health}, {attack})";
         }
 
-        public static string GenerateRandomEnemy(int seed)
+        public static Enemy GenerateRandomEnemy(int seed)
         {
             Random rand = new Random(seed);
 
             int randomName = rand.Next(0, DefaultNames.Length + 1);
             int randomHealth = rand.Next(50,101);
             int randomAttack = rand.Next(5,21);
+            Enemy randomEnemy = Enemy(DefaultNames[randomName], randomHealth, randomAttack)
 
-            return $"{DefaultNames[randomName]} ({randomHealth}, {randomAttack})";
+            return Enemy(DefaultNames[randomName], randomHealth, randomAttack);
         }
     }
 }
