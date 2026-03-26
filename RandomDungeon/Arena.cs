@@ -36,7 +36,19 @@ namespace RandomDungeon
         // Exemplo: "Arena: Troll, Skeleton, Ogre"
         public void ShowEnemies()
         {
-            Console.WriteLine($"Arena: {enemies}");
+            Console.Write("Arena:");
+
+            for(int i = 0; i < enemies.Count; i++)
+            {
+                if(i == enemies.Count - 1)
+                {
+                    Console.Write($" {enemies[i]}");
+                }
+                else
+                {
+                    Console.Write($" {enemies[i]},");
+                }
+            }
         }
         
         // Simula uma Batalha Entre Dois Inimigos
