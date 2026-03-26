@@ -1,2 +1,4 @@
 <Solution>
+  <Project Path="Chronos/Chronos.csproj" />
+  <Project Path="RandDice/RandDice.csproj" />
 </Solution>
