@@ -35,21 +35,26 @@ namespace RandomDungeon
             }
 
             // Mostra a Lista de Inimigos Atualmente na Arena
-            // CÓDIGO AQUI
+            arena.ShowEnemies();
+
+            List<Enemy> enemies = arena.GetEnemies();
             
             // Repetir Batalha (Enquanto Existe Mais do que 1 Inimigo)
-            while (// CÓDIGO AQUI)
+            while (enemies.Count < 1)
             {
                 // Obter a Lista Atual de Inimigos
-                List<Enemy> enemies = arena.GetEnemies();
+                enemies = arena.GetEnemies();
 
                 // Selecionar Aleatoriamente um Atacante
                 int attackerIndex = random.Next(enemies.Count);
 
                 // Selecionar Aleatoriamente um Defensor
                 // Garantindo que Não Seja o Mesmo que o Atacante
-                int defenderIndex;
-                // CÓDIGO AQUI
+                int defenderIndex = random.Next(enemies.Count);
+                while(defenderIndex == attackerIndex)
+                {
+                    defenderIndex = random.Next(enemies.Count);
+                }
                 
                 // Obter os Objetos Atacante e Defensor
                 Enemy attacker = enemies[attackerIndex];
