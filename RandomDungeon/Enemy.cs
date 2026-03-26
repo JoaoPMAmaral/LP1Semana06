@@ -61,7 +61,18 @@ namespace RandomDungeon
         // Devolve uma String Representando o Inimigo: "Nome (Vida, Ataque)"
         public override string ToString()
         {
-            // CÓDIGO AQUI
+            return $"{name} ({health}, {attack})";
+        }
+
+        public static string GenerateRandomEnemy(int seed)
+        {
+            Random rand = new Random(seed);
+
+            int randomName = rand.Next(0, DefaultNames.Length + 1);
+            int randomHealth = rand.Next(50,101);
+            int randomAttack = rand.Next(5,21);
+
+            return $"{DefaultNames[randomName]} ({randomHealth}, {randomAttack})";
         }
     }
 }

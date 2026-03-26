@@ -36,7 +36,7 @@ namespace RandomDungeon
         // Exemplo: "Arena: Troll, Skeleton, Ogre"
         public void ShowEnemies()
         {
-            // CÓDIGO AQUI
+            Console.WriteLine($"Arena: {enemies}");
         }
         
         // Simula uma Batalha Entre Dois Inimigos
@@ -44,10 +44,9 @@ namespace RandomDungeon
         {
             // Subtrai o Ataque do Atacante à Vida do Defensor
             // Garante que a Vida Não Fique Negativa
-            // CÓDIGO AQUI
+            Enemy enemy;
             
             // Se a Vida do Defensor Chegar a 0, Remove-o da Arena
-            // CÓDIGO AQUI
         }
     }
 }
