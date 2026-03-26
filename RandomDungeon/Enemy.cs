@@ -71,9 +71,10 @@ namespace RandomDungeon
             int randomName = rand.Next(0, DefaultNames.Length + 1);
             int randomHealth = rand.Next(50,101);
             int randomAttack = rand.Next(5,21);
-            Enemy randomEnemy = Enemy(DefaultNames[randomName], randomHealth, randomAttack)
+            
+            Enemy randomEnemy = new Enemy(DefaultNames[randomName], randomHealth, randomAttack);
 
-            return Enemy(DefaultNames[randomName], randomHealth, randomAttack);
+            return randomEnemy;
         }
     }
 }
